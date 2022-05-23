@@ -1,0 +1,21 @@
+<h1>Contact Us</h1>
+
+<p>We're very responsive over email 💌</p>
+
+<form action="/contact" method="GET">
+  <label for="query">Who do you want to search for?</label>
+  <input type="text" name="query"
+    id="query" placeholder="Jane Doe"
+    value="<%= @query %>">
+
+  <input type="submit">
+</form>
+
+<ol>
+  <% @members.each do |member| %>
+    <li>Our awesome team member: <%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<%# <a href="localhost:3000">Go Home</a> %>
+<%= link_to "Go Home", root_path %>
